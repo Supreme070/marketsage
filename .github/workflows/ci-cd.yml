@@ -47,4 +47,9 @@ jobs:
 
     - name: Build and push frontend image
       working-directory: ./marketsage-frontend
-      run:
+      run: |
+        docker buildx build \
+          --platform linux/amd64,linux/arm64 \
+          -t ghcr.io/${{ secrets.GHCR_USERNAME }}/marketsage-frontend:${{ github.sha }} \
+          -t ghcr.io/${{ secrets.GHCR_USERNAME }}/marketsage-frontend:latest \
+          --push .
