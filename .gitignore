@@ -1,4 +1,4 @@
 node_modules/
 .env
 *.log
-marketsage-backend/package-lock.json
+marketsage-backend/package-lock.jsonnode_modules/

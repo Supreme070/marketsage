@@ -1,16 +1,18 @@
 {
-    "name": "marketsage-backend",
-    "version": "1.0.0",
-    "scripts": {
-      "start": "node server.js",
-      "test": "mocha --exit"
-    },
-    "dependencies": {
-      "express": "^4.18.2"
-    },
-    "devDependencies": {
-      "mocha": "^10.2.0",
-      "chai": "^4.3.10",
-      "chai-http": "^4.4.0"
-    }
+  "name": "marketsage-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --exit"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.4.5",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0"
   }
+}
