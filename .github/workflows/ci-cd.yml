@@ -81,4 +81,4 @@ jobs:
             docker pull ghcr.io/supreme070/marketsage-backend:latest
             docker pull ghcr.io/supreme070/marketsage-frontend:latest
             # Replace the following with your actual deployment commands
-            docker-compose -f /path/to/docker-compose.yml up -d
+            docker-compose -f /Users/supreme/Desktop/marketsage-project/.github/workflows/ci-cd.yml up -d
