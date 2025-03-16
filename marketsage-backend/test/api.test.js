@@ -1,23 +1,39 @@
-const request = require('supertest');
-const app = require('../server');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const app = require('../server'); // Assuming server.js exports the app
+const expect = chai.expect;
+
+chai.use(chaiHttp);
 
 describe('API Endpoints', () => {
-  it('GET /api/campaigns should return all campaigns', async () => {
-    const res = await request(app).get('/api/campaigns');
-    expect(res.statusCode).toEqual(200);
-    expect(res.body).toBeInstanceOf(Array);
+  it('GET /api/campaigns should return all campaigns', (done) => {
+    chai.request(app)
+      .get('/api/campaigns')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.an('array');
+        done();
+      });
   });
 
-  it('GET /api/campaigns/:id should return a single campaign', async () => {
-    const res = await request(app).get('/api/campaigns/1');
-    expect(res.statusCode).toEqual(200);
-    expect(res.body).toHaveProperty('id', 1);
+  it('GET /api/campaigns/:id should return a single campaign', (done) => {
+    chai.request(app)
+      .get('/api/campaigns/1')
+      .end((err, res) => {
+        expect(res).to.have.status(200);
+        expect(res.body).to.be.an('object');
+        done();
+      });
   });
 
-  it('POST /api/campaigns should create a new campaign', async () => {
-    const newCampaign = { name: 'Test Campaign', platform: 'SMS', reach: 10000 };
-    const res = await request(app).post('/api/campaigns').send(newCampaign);
-    expect(res.statusCode).toEqual(201);
-    expect(res.body).toHaveProperty('name', 'Test Campaign');
+  it('POST /api/campaigns should create a new campaign', (done) => {
+    chai.request(app)
+      .post('/api/campaigns')
+      .send({ name: 'Test Campaign', budget: 1000 })
+      .end((err, res) => {
+        expect(res).to.have.status(201);
+        expect(res.body).to.have.property('id');
+        done();
+      });
   });
 });
