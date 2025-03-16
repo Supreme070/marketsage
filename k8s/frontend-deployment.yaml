@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: yourusername/marketsage-frontend:latest
+        image: ghcr.io/supreme070/marketsage-frontend:latest
         ports:
         - containerPort: 80
         livenessProbe:
