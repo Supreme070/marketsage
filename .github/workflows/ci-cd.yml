@@ -28,8 +28,7 @@ jobs:
 
   build-and-push:
     runs-on: ubuntu-latest
-    # Uncomment 'needs: test' if you want builds to wait for tests to pass
-    # needs: test
+    needs: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -81,4 +80,4 @@ jobs:
             docker pull ghcr.io/supreme070/marketsage-backend:latest
             docker pull ghcr.io/supreme070/marketsage-frontend:latest
             # Replace the following with your actual deployment commands
-            docker-compose -f /Users/supreme/Desktop/marketsage-project/.github/workflows/ci-cd.yml up -d
+            docker-compose -f /Users/supreme/Desktop/marketsage-project/docker-compose.yml up -d
