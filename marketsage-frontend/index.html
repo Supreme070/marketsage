@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarketSage - AI-Powered Marketing Automation for Nigeria</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+
+  <!-- AOS Library for scroll animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Bar with Contact Info -->
+  <div class="top-bar">
+    <div class="top-bar-content">
+      <div class="contact-info">
+        <i class="fas fa-phone-alt"></i> +234-806-136-4696
+        <span class="divider">|</span>
+        <i class="fas fa-envelope"></i> info@marketsage.com
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <div class="brand-wrapper">
+        <img src="assets/logo.svg" alt="MarketSage" class="logo" />
+        <div class="tagline">SMART MARKETING, BIGGER SALES</div>
+      </div>
+      <div class="nav-actions">
+        <ul class="desktop-nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#demo">Book Demo</a></li>
+        </ul>
+        <a href="#trial" class="nav-cta">Start Free Trial</a>
+        <button class="hamburger" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#clients">Clients</a>
+      <a href="#faq">FAQ</a>
+      <a href="#demo">Book Demo</a>
+      <a href="#trial" class="highlight-link">Start Free Trial</a>
+    </div>
+  </header>
+
+  <!-- Hero Section with Clip-Path (Slanted Bottom) -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Transform Your Marketing with MARKETSAGE</h1>
+        <p class="lead">
+          Automate SMS, WhatsApp &amp; Email campaigns with real-time ROI tracking built for West Africa.
+        </p>
+        <div class="cta-group">
+          <a href="#demo" class="main-cta">Book a Free Demo</a>
+          <a href="#trial" class="secondary-cta"
+            >Start 14-Day Free Trial <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="trust-badges">
+          <img src="assets/ndpr-badge.svg" alt="NDPR Compliant" />
+          <img src="assets/pci-dss.svg" alt="PCI DSS Certified" />
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dashboard-preview" data-aos="zoom-in">
+          <img
+            src="assets/dashboard-preview.png"
+            alt="Campaign Dashboard"
+          />
+          <div class="live-stats">
+            <div class="stat" data-target="24000000">
+              ₦<span class="counter">0</span> Generated
+            </div>
+            <div class="stat" data-target="98">
+              <span class="counter">0</span>% Delivery Rate
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="value-props" data-aos="fade-up">
+    <h2>Why MarketSage?</h2>
+    <div class="prop-grid">
+      <div class="prop-card" data-aos="flip-left">
+        <h3><i class="fas fa-bolt"></i> Made for Nigeria</h3>
+        <ul>
+          <li>MTN/Airtel SMS Gateways</li>
+          <li>Pidgin English Templates</li>
+          <li>Offline USSD Campaigns</li>
+        </ul>
+      </div>
+      <div class="prop-card" data-aos="flip-left">
+        <h3><i class="fas fa-chart-line"></i> ROI-First Analytics</h3>
+        <ul>
+          <li>Real-time ₦ Conversion Tracking</li>
+          <li>WhatsApp Read Receipts</li>
+          <li>Multi-Channel Attribution</li>
+        </ul>
+      </div>
+      <div class="prop-card" data-aos="flip-left">
+        <h3><i class="fas fa-shield-alt"></i> Enterprise Security</h3>
+        <ul>
+          <li>NDPR Compliance Tools</li>
+          <li>Bank-Grade Encryption</li>
+          <li>SLA Guarantees</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI Calculator -->
+  <section class="roi-calculator" data-aos="fade-up">
+    <h2>Calculate Your Potential ROI</h2>
+    <form id="roiForm">
+      <label>
+        Monthly SMS/WhatsApp Volume:
+        <input type="number" id="smsVolume" placeholder="20000" required />
+      </label>
+      <label>
+        Conversion Rate (%):
+        <input type="number" id="conversionRate" placeholder="5" required />
+      </label>
+      <button type="submit">Calculate ROI</button>
+    </form>
+    <div id="roiResult"></div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing" data-aos="fade-up">
+    <h2>Flexible Plans for Every Business</h2>
+    <div class="pricing-grid">
+      <div class="pricing-card" data-aos="fade-right">
+        <h4>Starter</h4>
+        <h3>₦5,000<span>/month</span></h3>
+        <ul>
+          <li>5,000 SMS/WhatsApp</li>
+          <li>2,000 Emails</li>
+          <li>Basic Analytics</li>
+          <li>Standard Support</li>
+        </ul>
+        <a href="#starter" class="price-cta"
+          >Choose Plan <i class="fas fa-chevron-right"></i></a>
+      </div>
+
+      <div class="pricing-card highlight" data-aos="fade-up">
+        <h4>Most Popular</h4>
+        <h3>₦15,000<span>/month</span></h3>
+        <ul>
+          <li>20,000 SMS/WhatsApp</li>
+          <li>5,000 Emails</li>
+          <li>Advanced Analytics</li>
+          <li>Priority Support</li>
+        </ul>
+        <a href="#pro" class="price-cta"
+          >Choose Plan <i class="fas fa-chevron-right"></i></a>
+      </div>
+
+      <div class="pricing-card" data-aos="fade-left">
+        <h4>Enterprise</h4>
+        <h3>Custom</h3>
+        <ul>
+          <li>Unlimited SMS/WhatsApp</li>
+          <li>Unlimited Emails</li>
+          <li>Custom Integrations</li>
+          <li>Dedicated Account Manager</li>
+        </ul>
+        <a href="#enterprise" class="price-cta"
+          >Contact Sales <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nigerian Client Showcase -->
+  <section id="clients" class="client-showcase" data-aos="fade-up">
+    <h2>Trusted by Nigeria's Top Brands</h2>
+    <div class="client-grid">
+      <div class="client-card" data-aos="zoom-in">
+        <img src="assets/jumia-logo.png" alt="Jumia" />
+        <p>"Increased conversions by 40% using MarketSage's automation."</p>
+      </div>
+      <div class="client-card" data-aos="zoom-in">
+        <img src="assets/gtbank-logo.png" alt="GTBank" />
+        <p>"Secure and NDPR-compliant for all our campaigns."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>1.</span> What sets MarketSage apart from other platforms?
+      </button>
+      <div class="faq-answer">
+        <p>
+          Our AI-driven approach is tailored to the Nigerian market, offering local SMS gateways, Pidgin English templates, NDPR compliance, and advanced ROI analytics.
+        </p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">
+        <span>2.</span> Do I need a credit card to start the free trial?
+      </button>
+      <div class="faq-answer">
+        <p>
+          No, we only ask for basic info to get you set up. You can cancel any time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section id="demo" class="demo-section" data-aos="fade-up">
+    <h2>Book a Free Demo</h2>
+    <p>
+      Ready to see MarketSage in action? Book a live demo with our team and find out how we can streamline your marketing strategy.
+    </p>
+    <a href="#" class="demo-btn">Schedule Demo</a>
+  </section>
+
+  <!-- Trial Section -->
+  <section id="trial" class="trial-section" data-aos="fade-up">
+    <h2>Start Your 14-Day Free Trial</h2>
+    <p>
+      Experience the power of MarketSage first-hand, risk-free. No credit card required!
+    </p>
+    <a href="#" class="trial-btn">Create Your Account</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 MarketSage. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Crisp Live Chat (optional) -->
+  <script type="text/javascript">
+    window.$crisp=[];window.CRISP_WEBSITE_ID="YOUR_WEBSITE_ID";
+    (function(){
+      d=document;s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";s.async=1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Main JavaScript -->
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Sticky Header on Scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      mobileNav.classList.toggle('open');
+    });
+
+    // Animated Counters using Intersection Observer
+    const counters = document.querySelectorAll(".counter");
+    const speed = 200;
+    const observerOptions = { threshold: 0.2 };
+
+    function animateCounter(counter) {
+      const target = +counter.parentElement.getAttribute("data-target");
+      const step = target / speed;
+      let count = 0;
+      const updateCount = () => {
+        count += step;
+        if (count < target) {
+          counter.textContent = Math.floor(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = target.toLocaleString();
+        }
+      };
+      updateCount();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach(cnt => observer.observe(cnt));
+
+    // FAQ Accordion
+    const faqButtons = document.querySelectorAll('.faq-question');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+        answer.classList.toggle('open');
+      });
+    });
+
+    // ROI Calculator
+    const roiForm = document.getElementById("roiForm");
+    if (roiForm) {
+      roiForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const volume = Number(document.getElementById("smsVolume").value);
+        const conversion = Number(document.getElementById("conversionRate").value);
+
+        // Simple demonstration formula
+        const avgOrderValue = 5000;
+        const estimatedRevenue = volume * (conversion / 100) * avgOrderValue;
+
+        const roiResult = document.getElementById("roiResult");
+        roiResult.innerHTML = `
+          <p>Your Estimated Monthly Revenue: ₦${estimatedRevenue.toLocaleString()}</p>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MarketSage Demo Dashboard - Colorful Version</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="dashboard-styles.css" />
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="assets/logo.svg" alt="MarketSage" />
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="active"><a href="#"><i class="fas fa-bullhorn"></i> Campaigns</a></li>
+        <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+        <li><a href="#"><i class="fas fa-user-friends"></i> Segments</a></li>
+        <li><a href="#"><i class="fas fa-envelope-open-text"></i> Templates</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Top Bar -->
+    <header class="dashboard-header">
+      <h2>Welcome, Jane (Demo Account)</h2>
+      <div class="profile-area">
+        <i class="fas fa-bell"></i>
+        <img src="assets/user-avatar.png" alt="User" class="avatar" />
+      </div>
+    </header>
+
+    <!-- Stats Overview -->
+    <section class="stats-overview">
+      <!-- Vibrant card for total campaigns -->
+      <div class="stat-card gradient-campaigns">
+        <h3>Total Campaigns</h3>
+        <p class="stat-value">38</p>
+        <p class="stat-label"><i class="fas fa-bullhorn"></i> Running & Completed</p>
+      </div>
+
+      <!-- Revenue card -->
+      <div class="stat-card gradient-revenue">
+        <h3>Generated Revenue</h3>
+        <p class="stat-value">₦12.8M</p>
+        <p class="stat-label"><i class="fas fa-money-bill-wave"></i> Estimated ROI</p>
+      </div>
+
+      <!-- Average Open Rate -->
+      <div class="stat-card gradient-openrate">
+        <h3>Avg Open Rate</h3>
+        <p class="stat-value">41.2%</p>
+        <p class="stat-label"><i class="fas fa-envelope-open-text"></i> Across Channels</p>
+      </div>
+    </section>
+
+    <!-- More Detailed Reach Stats -->
+    <section class="reach-section">
+      <h3>Channel Reach Breakdown</h3>
+      <div class="reach-cards">
+        <div class="stat-card gradient-sms">
+          <h4><i class="fas fa-sms"></i> SMS Reach</h4>
+          <p class="stat-value">30,000</p>
+        </div>
+        <div class="stat-card gradient-whatsapp">
+          <h4><i class="fab fa-whatsapp"></i> WhatsApp Reach</h4>
+          <p class="stat-value">25,000</p>
+        </div>
+        <div class="stat-card gradient-email">
+          <h4><i class="fas fa-envelope"></i> Email Reach</h4>
+          <p class="stat-value">37,350</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Charts / Analytics Section -->
+    <section class="analytics-section">
+      <div class="chart-container">
+        <div class="chart-header">
+          <h3>Channel Breakdown</h3>
+          <select>
+            <option>Last 30 Days</option>
+            <option>Last 7 Days</option>
+            <option>Last 90 Days</option>
+          </select>
+        </div>
+        <!-- Placeholder donut/pie chart -->
+        <div class="chart-placeholder">
+          <img src="assets/donut-chart-placeholder.png" alt="Channel Breakdown Chart" />
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-header">
+          <h3>Engagement Over Time</h3>
+          <select>
+            <option>Last 30 Days</option>
+            <option>Last 7 Days</option>
+            <option>Last 90 Days</option>
+          </select>
+        </div>
+        <!-- Placeholder line chart -->
+        <div class="chart-placeholder">
+          <img src="assets/line-chart-placeholder.png" alt="Engagement Over Time" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Campaign Table -->
+    <section class="campaigns-table">
+      <h3>Recent Campaigns</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Campaign</th>
+            <th>Channel</th>
+            <th>Recipients</th>
+            <th>Open Rate</th>
+            <th>Revenue</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>December Promo Blast</td>
+            <td>SMS + Email</td>
+            <td>15,000</td>
+            <td>38%</td>
+            <td>₦3,200,000</td>
+            <td><span class="status-pill live">Live</span></td>
+          </tr>
+          <tr>
+            <td>Holiday Mega Sale</td>
+            <td>WhatsApp</td>
+            <td>8,500</td>
+            <td>45%</td>
+            <td>₦2,100,000</td>
+            <td><span class="status-pill completed">Completed</span></td>
+          </tr>
+          <tr>
+            <td>New Year Countdown</td>
+            <td>SMS + WhatsApp</td>
+            <td>10,200</td>
+            <td>50%</td>
+            <td>₦1,850,000</td>
+            <td><span class="status-pill scheduled">Scheduled</span></td>
+          </tr>
+          <tr>
+            <td>Product Launch Teaser</td>
+            <td>Email</td>
+            <td>5,000</td>
+            <td>29%</td>
+            <td>₦600,000</td>
+            <td><span class="status-pill completed">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

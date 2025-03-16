@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MarketSage | Smart Marketing for West Africa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Suggested Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" 
+    rel="stylesheet"
+  >
+  <style>
+    body {
+      margin: 0; 
+      padding: 0; 
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 780px;
+      margin: auto;
+      padding: 1rem;
+    }
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(to right, #005792, #008753);
+      color: #fff;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 0.25rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 0.4rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .cta-orange {
+      background-color: #E07A1F;
+    }
+    .cta-green {
+      background-color: #008753;
+    }
+
+    /* Section Wrapper */
+    .section {
+      background: #fff;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+    .section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      color: #005792;
+    }
+    .section p {
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    ul {
+      list-style: none;
+      margin: 0.5rem 0;
+      padding: 0;
+    }
+    li {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      line-height: 1.4;
+    }
+    li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #008753;
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+    .highlight {
+      color: #008753; 
+      font-weight: 600;
+    }
+
+    /* Two-Column Layout for some sections (optional) */
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .flex > div {
+      flex: 1 1 350px;
+      background: #fff;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+
+    /* Demo area */
+    .demo-section {
+      background: #f0f0f0;
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    .demo-section a {
+      display: inline-block;
+      background: #E07A1F;
+      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 0.4rem;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    /* Testimonial Box */
+    .testimonial {
+      background: #fafafa;
+      border-left: 4px solid #008753;
+      padding: 1rem;
+      font-style: italic;
+      margin-top: 1rem;
+      border-radius: 0.3rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta-section a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 0.4rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700;
+    }
+    .cta-primary {
+      background: #008753;
+    }
+    .cta-secondary {
+      background: #E07A1F;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero / Introduction -->
+    <section class="hero">
+      <!-- [logo here] if desired, floating or above. -->
+      <h1>Smart Marketing, Bigger Sales</h1>
+      <p>
+        Welcome to <strong>MarketSage</strong>, Nigeria’s AI-powered platform for 
+        automated <strong>SMS, WhatsApp, and Email campaigns</strong>. 
+        Built for West Africa, we help you reach new heights with 
+        localized messaging, real-time ROI tracking, and compliance you can trust.
+      </p>
+      <div class="cta-buttons">
+        <a href="#solutions" class="cta-orange">See Our Solutions</a>
+        <a href="#dashboard" class="cta-green">Try Our Demo</a>
+      </div>
+    </section>
+
+    <!-- Solutions & Capabilities Section -->
+    <section id="solutions" class="section">
+      <h2>What We Offer</h2>
+      <p>
+        MarketSage goes beyond generic marketing tools. We combine powerful local gateways 
+        (MTN &amp; Airtel), robust WhatsApp API integration, and advanced email deliverability to 
+        deliver results you can actually measure. Whether you’re a fast-rising startup or 
+        an established enterprise, our solutions scale to your needs.
+      </p>
+      <ul>
+        <li>
+          <strong>Local Gateways &amp; Channels:</strong> 
+          Reach any audience with <span class="highlight">MTN/Airtel SMS</span>, 
+          <span class="highlight">WhatsApp Business API</span>, and 
+          <span class="highlight">Email automation</span>.
+        </li>
+        <li>
+          <strong>NDPR-Compliant Analytics:</strong> 
+          Track open rates, conversions, and revenue—securely and privately.
+        </li>
+        <li>
+          <strong>AI-Powered Personalization:</strong> 
+          Segment users using <span class="highlight">Pidgin English templates</span>, 
+          USSD triggers, or multi-channel workflows.
+        </li>
+        <li>
+          <strong>Real-Time ROI Dashboards:</strong> 
+          Monitor success at a glance, from campaign impressions 
+          to total <span class="highlight">₦ revenue</span> generated.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Achievements / Local Impact -->
+    <section class="section">
+      <h2>Our Impact</h2>
+      <p>
+        We’ve helped businesses across Nigeria achieve higher open rates, better 
+        conversions, and more <strong>authentic connections</strong> with customers. 
+        From e-commerce to financial services, MarketSage unleashes the full potential 
+        of <span class="highlight">multi-channel automation</span> in the African context.
+      </p>
+      <p>
+        Leading retailers report a <strong>40% boost in revenue</strong> after implementing 
+        our advanced targeting. Banks rely on our bank-grade encryption and NDPR compliance 
+        for <strong>secure, personalized</strong> messaging at scale.
+      </p>
+      <div class="testimonial">
+        “We never realized how critical localized SMS &amp; WhatsApp campaigns were 
+        until MarketSage simplified it. Our sales spiked!” 
+        — Head of Marketing, Major Nigerian Retailer
+      </div>
+    </section>
+
+    <!-- Dashboard / Analytics Demo -->
+    <section id="dashboard" class="demo-section">
+      <h2>Interactive Dashboard Demo</h2>
+      <p>
+        Curious how it all looks behind the scenes? Explore our <strong>live analytics</strong> 
+        preview—featuring real-time delivery stats, conversions, and a “Recent Campaigns” table. 
+        Visualize your ROI with vibrant charts, or dive into local performance metrics for 
+        laser-focused insights.
+      </p>
+      <a href="[link-to-dashboard-page]" target="_blank">View Our Demo Dashboard</a>
+    </section>
+
+    <!-- Why MarketSage & Security -->
+    <section class="section">
+      <h2>Why Choose MarketSage?</h2>
+      <ul>
+        <li>
+          <strong>Local Compliance &amp; Security:</strong> 
+          NDPR-ready, with <span class="highlight">bank-grade encryption</span> that 
+          keeps customer data safe.
+        </li>
+        <li>
+          <strong>Tailored for West Africa:</strong> 
+          Pidgin-friendly templates, offline USSD campaigns, flexible local billing.
+        </li>
+        <li>
+          <strong>Proven Track Record:</strong> 
+          Trusted by top Nigerian brands across e-commerce, fintech, and retail sectors.
+        </li>
+        <li>
+          <strong>Fast, Friendly Support:</strong> 
+          Our Lagos-based team is on standby to assist you every step of the way.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+      <h2>Ready to See Real Results?</h2>
+      <a href="#signup" class="cta-primary">Start Your 14-Day Free Trial</a>
+      <a href="#book-demo" class="cta-secondary">Book a Demo Today</a>
+    </div>
+  </div>
+</body>
+</html>
